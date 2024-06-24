@@ -14,23 +14,23 @@ while(Serial.available()){
 
 if(voice.length() >0){
   Serial.println(voice);
-  if(voice == "light on")
+  if(voice == "lamp on")
   {digitalWrite(6, HIGH);}
-  else if(voice == "light off")
+  else if(voice == "lamp off" || voice == "lamp of")
   {digitalWrite(6, LOW);}
   else if(voice == "fan on")
   {digitalWrite(5, HIGH);}
-  else if(voice == "fan off")
+  else if(voice == "fan off" || voice == "fan of")
   {digitalWrite(5, LOW);}
-  else if(voice == "night lamp on")
+  else if(voice == "light on")
   {digitalWrite(4, HIGH);}
-  else if(voice == "night lamp off")
+  else if(voice == "light off" || voice == "light of")
   {digitalWrite(4, LOW);}
   else if(voice == "all on")
   {digitalWrite(4, HIGH);
     digitalWrite(5, HIGH);
   digitalWrite(6, HIGH);}
-  else if(voice == "all off")
+  else if(voice == "all off" || voice == "all of")
   {digitalWrite(4, LOW);
     digitalWrite(5, LOW);
   digitalWrite(6, LOW);}
